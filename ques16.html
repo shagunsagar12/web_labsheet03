@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+
+<h2>Image Gallery</h2>
+
+<img id="gallery" src="https://via.placeholder.com/400x250?text=Image+1"
+     width="400" height="250">
+
+<br><br>
+
+<button onclick="previousImage()">Previous</button>
+<button onclick="nextImage()">Next</button>
+
+<script>
+    let images = [
+        "https://via.placeholder.com/400x250?text=Image+1",
+        "https://via.placeholder.com/400x250?text=Image+2",
+        "https://via.placeholder.com/400x250?text=Image+3",
+        "https://via.placeholder.com/400x250?text=Image+4"
+    ];
+
+    let index = 0;
+
+    function nextImage() {
+        index++;
+
+        if (index >= images.length) {
+            index = 0;
+        }
+
+        document.getElementById("gallery").src = images[index];
+    }
+
+    function previousImage() {
+        index--;
+
+        if (index < 0) {
+            index = images.length - 1;
+        }
+
+        document.getElementById("gallery").src = images[index];
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Manipulation</title>
+</head>
+<body>
+
+    <h2>JavaScript Array Manipulation</h2>
+
+    <script>
+        // Create an array
+        let numbers = [10, 20, 30, 40, 50];
+
+        console.log("Original Array:", numbers);
+
+        // Add an element using push()
+        numbers.push(60);
+        console.log("After push():", numbers);
+
+        // Remove an element using pop()
+        numbers.pop();
+        console.log("After pop():", numbers);
+
+        // Sort the array
+        numbers.sort((a, b) => a - b);
+        console.log("After sort():", numbers);
+
+        // Multiply each element using map()
+        let doubled = numbers.map(function(num) {
+            return num * 2;
+        });
+        console.log("After map():", doubled);
+
+        // Filter elements greater than 25
+        let filtered = numbers.filter(function(num) {
+            return num > 25;
+        });
+        console.log("After filter():", filtered);
+
+        // Display result
+        document.write("Original Array: " + numbers + "<br>");
+        document.write("Doubled Array: " + doubled + "<br>");
+        document.write("Filtered Array: " + filtered);
+    </script>
+
+</body>
+</html>

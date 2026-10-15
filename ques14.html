@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Exception Handling</title>
+</head>
+<body>
+
+<script>
+    let jsonString = '{"name":"Rahul","age":21}';
+
+    try {
+        let student = JSON.parse(jsonString);
+
+        console.log("Name:", student.name);
+        console.log("Age:", student.age);
+    }
+    catch (error) {
+        console.log("Error:", error.message);
+    }
+    finally {
+        console.log("JSON processing completed.");
+    }
+</script>
+
+</body>
+</html>

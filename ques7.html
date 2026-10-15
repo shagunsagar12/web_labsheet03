@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Object</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+
+    <script>
+        // Creating Student object
+        let student = {
+            name: "Rahul",
+            age: 21,
+            course: "MCA",
+            marks: 85,
+
+            // Method to display student details
+            displayDetails: function() {
+                console.log("Name: " + this.name);
+                console.log("Age: " + this.age);
+                console.log("Course: " + this.course);
+                console.log("Marks: " + this.marks);
+            },
+
+            // Method to check result
+            checkResult: function() {
+                if (this.marks >= 40) {
+                    return "Pass";
+                } else {
+                    return "Fail";
+                }
+            }
+        };
+
+        // Calling methods
+        student.displayDetails();
+
+        console.log("Result: " + student.checkResult());
+
+        // Display on web page
+        document.write("Name: " + student.name + "<br>");
+        document.write("Age: " + student.age + "<br>");
+        document.write("Course: " + student.course + "<br>");
+        document.write("Marks: " + student.marks + "<br>");
+        document.write("Result: " + student.checkResult());
+    </script>
+
+</body>
+</html>
+
+
+        

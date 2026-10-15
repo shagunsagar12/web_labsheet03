@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+</head>
+<body>
+
+<script>
+    const student = {
+        name: "Rahul",
+        age: 21,
+        course: "MCA"
+    };
+
+    // Destructuring
+    const { name, age, course } = student;
+
+    // Arrow function
+    const greet = (name) => {
+        return `Hello ${name}`;
+    };
+
+    // Template literal
+    console.log(greet(name));
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Course: ${course}`);
+
+    document.write(`
+        Name: ${name}<br>
+        Age: ${age}<br>
+        Course: ${course}<br>
+        ${greet(name)}
+    `);
+</script>
+
+</body>
+</html>

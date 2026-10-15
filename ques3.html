@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade</title>
+</head>
+<body>
+
+    <h2>Student Grade Calculator</h2>
+
+    <script>
+        let marks = parseInt(prompt("Enter student's marks:"));
+        let grade;
+
+        // Using if-else
+        if (marks >= 90 && marks <= 100) {
+            grade = "A";
+        } 
+        else if (marks >= 80) {
+            grade = "B";
+        } 
+        else if (marks >= 70) {
+            grade = "C";
+        } 
+        else if (marks >= 60) {
+            grade = "D";
+        } 
+        else if (marks >= 0) {
+            grade = "F";
+        } 
+        else {
+            grade = "Invalid Marks";
+        }
+
+        // Using switch
+        switch (grade) {
+            case "A":
+                console.log("Grade A - Excellent");
+                break;
+
+            case "B":
+                console.log("Grade B - Very Good");
+                break;
+
+            case "C":
+                console.log("Grade C - Good");
+                break;
+
+            case "D":
+                console.log("Grade D - Pass");
+                break;
+
+            case "F":
+                console.log("Grade F - Fail");
+                break;
+
+            default:
+                console.log("Invalid Marks");
+        }
+
+        alert("Student Grade: " + grade);
+    </script>
+
+</body>
+</html>

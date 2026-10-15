@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Closure Counter</title>
+</head>
+<body>
+
+<button onclick="counter.increment()">Increment</button>
+<button onclick="counter.decrement()">Decrement</button>
+
+<h2 id="result">0</h2>
+
+<script>
+function createCounter() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            count++;
+            document.getElementById("result").innerHTML = count;
+        },
+
+        decrement: function() {
+            count--;
+            document.getElementById("result").innerHTML = count;
+        }
+    };
+}
+
+let counter = createCounter();
+</script>
+
+</body>
+</html>
